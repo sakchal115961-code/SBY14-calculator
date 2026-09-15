@@ -591,8 +591,8 @@
   </div>
 
   <script>
-    // ⚙️ URL ปลายทางของ Google Apps Script Web App
-    const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxX6imiGB6U3PcTFKNYH_fJ3UA7fYq--yyHTLPnCtNJ5o92GYSgEKJDyhp5KoZTJHxP/exec";
+    // ⚙️ URL ปลายทางของ Google Apps Script Web App (Public Gateway ล่าสุด)
+    const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzvRaEns_tCwu75CFn9e8vQG-QfXLdoImVeSramhHagh4_kJsQVuLqsP3MkUMxSsKlp/exec";
 
     const spec = {
       name: 'ขนาด 200',
@@ -748,7 +748,6 @@
       const file = e.target.files[0];
       if (!file) return;
 
-      // ทำการย่อขนาดภาพด้วย Canvas เพื่อลดขนาดไฟล์ก่อนส่ง
       const reader = new FileReader();
       reader.onload = function(event) {
         const img = new Image();
@@ -756,7 +755,7 @@
           const canvas = document.createElement('canvas');
           let width = img.width;
           let height = img.height;
-          const maxDim = 1024; // ด้านกว้างสุดไม่เกิน 1024px
+          const maxDim = 1024;
 
           if (width > height && width > maxDim) {
             height = Math.round((height * maxDim) / width);
@@ -771,7 +770,6 @@
           const ctx = canvas.getContext('2d');
           ctx.drawImage(img, 0, 0, width, height);
 
-          // แปลงเป็น JPEG คุณภาพ 70% (~150-200KB)
           const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.7);
           capturedImages.push(compressedDataUrl);
           updatePhotoGallery();
@@ -780,7 +778,7 @@
       };
       reader.readAsDataURL(file);
 
-      this.value = ''; // รีเซ็ต input
+      this.value = '';
     });
 
     function updatePhotoGallery() {
@@ -829,7 +827,6 @@
         return;
       }
 
-      // เตรียมข้อมูล Payload
       const payload = {
         sku: spec.name,
         targetDemand: targetDemand,
@@ -840,7 +837,6 @@
         image: capturedImages.length > 0 ? capturedImages[0] : null
       };
 
-      // ล็อกปุ่มและแสดงสถานะ
       submitBtn.disabled = true;
       statusMsg.className = 'status-msg sending';
       statusMsg.textContent = '⏳ กำลังบันทึกข้อมูลและส่งรายงานเข้า LINE...';
@@ -853,7 +849,6 @@
           body: JSON.stringify(payload)
         });
 
-        // ส่งสำเร็จ
         statusMsg.className = 'status-msg success';
         statusMsg.textContent = '✅ ส่งรายงานยอดผลิตเข้ากลุ่ม LINE เรียบร้อยแล้ว!';
         
