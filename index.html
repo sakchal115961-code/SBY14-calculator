@@ -610,6 +610,22 @@
       calculate();
     });
 
+    // เมื่อกดจิ้มที่ช่องพิมพ์: ถ้าเป็นเลข 0 ให้ล้างออกทันที เพื่อให้พิมพ์ตัวเลขได้เลย
+    volumeInput.addEventListener('focus', function() {
+      if (this.value === '0') {
+        this.value = '';
+      }
+    });
+
+    // เมื่อกดออกจากช่องพิมพ์: ถ้าไม่ได้พิมพ์อะไร ให้คืนค่าเป็น 0
+    volumeInput.addEventListener('blur', function() {
+      if (this.value === '' || isNaN(this.value)) {
+        this.value = '0';
+        volumeSlider.value = 0;
+        calculate();
+      }
+    });
+
     volumeInput.addEventListener('input', (e) => {
       let val = parseInt(e.target.value) || 0;
       if (val > 1000000) val = 1000000;
@@ -747,7 +763,6 @@
     const submitBtnText = document.getElementById('btnSubmitText');
     let capturedImages = [];
 
-    // ตรวจสอบและควบคุมสถานะปุ่มส่ง
     function checkPhotoRequirement() {
       if (capturedImages.length > 0) {
         submitBtn.disabled = false;
@@ -787,7 +802,7 @@
           const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.7);
           capturedImages.push(compressedDataUrl);
           updatePhotoGallery();
-          checkPhotoRequirement(); // ปลดล็อกปุ่มส่งทันที
+          checkPhotoRequirement();
         };
         img.src = event.target.result;
       };
@@ -829,7 +844,7 @@
     function deletePhoto(index) {
       capturedImages.splice(index, 1);
       updatePhotoGallery();
-      checkPhotoRequirement(); // ถ้าลบรูปออกจนหมด ให้กลับไปล็อกปุ่ม
+      checkPhotoRequirement();
     }
 
     function resetForm() {
@@ -837,7 +852,7 @@
       volumeInput.value = 0;
       capturedImages = [];
       updatePhotoGallery();
-      checkPhotoRequirement(); // รีเซ็ตสถานะปุ่มกลับเป็นล็อก
+      checkPhotoRequirement();
       calculate();
     }
 
@@ -851,7 +866,6 @@
         return;
       }
 
-      // ตรวจสอบเงื่อนไขรูปถ่ายซ้ำอีกชั้นเพื่อความปลอดภัยสูงสุด
       if (capturedImages.length === 0) {
         alert('⚠️ กรุณาถ่ายภาพพาเลท/สินค้าหน้างานอย่างน้อย 1 รูป ก่อนส่งรายงาน');
         return;
