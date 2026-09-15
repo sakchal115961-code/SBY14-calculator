@@ -17,6 +17,7 @@
       --border: #e2e8f0;
       --red-bottle: #ef4444;
       --success: #16a34a;
+      --disabled: #94a3b8;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Sarabun", sans-serif; }
@@ -400,10 +401,11 @@
     }
     .btn-submit:active { transform: scale(0.98); }
     .btn-submit:disabled {
-      background: #94a3b8;
-      cursor: not-allowed;
-      box-shadow: none;
-      transform: none;
+      background: var(--disabled) !important;
+      cursor: not-allowed !important;
+      box-shadow: none !important;
+      transform: none !important;
+      opacity: 0.85;
     }
     .status-msg {
       text-align: center;
@@ -435,7 +437,7 @@
     <div class="header-bar">
       <div class="header-titles">
         <h1>ระบบคำนวณพาเลทและยอดบรรจุ</h1>
-        <p>คำนวณพาเลทเต็ม ชั้น กล่อง และเศษขวด สำหรับขนาด 200</p>
+        <p>คำนวณพาเลทเต็ม พาเลทเศษ เศษกล่อง และเศษขวด สำหรับขนาด 200</p>
       </div>
       <span class="badge-export">EXPORT 200</span>
     </div>
@@ -461,7 +463,7 @@
         <span class="card-sub" id="cardFullPalletsBtl">0 ขวด</span>
       </div>
       <div class="sum-card">
-        <span class="card-title">ชั้นเต็ม (พาเลทเศษ)</span>
+        <span class="card-title">พาเลทเศษ</span>
         <div class="card-num" id="cardPartialLayers">0</div>
         <span class="card-sub" id="cardPartialLayersBtl">0 ขวด</span>
       </div>
@@ -471,7 +473,7 @@
         <span class="card-sub" id="cardExtraBoxesBtl">0 ขวด</span>
       </div>
       <div class="sum-card">
-        <span class="card-title">เศษขวดปลีก</span>
+        <span class="card-title">เศษขวด</span>
         <div class="card-num" id="cardLooseBottles">0</div>
         <span class="card-sub" id="cardLooseBottlesBtl">0 ขวด</span>
       </div>
@@ -479,7 +481,7 @@
 
     <div class="vis-box">
       <div class="vis-header">
-        <span class="title">ภาพจำลองการจัดเรียง (พาเลทสุดท้าย)</span>
+        <span class="title">ภาพจำลองการจัดเรียง (พาเลทเศษ)</span>
         <span class="badge" id="skuSpecLabel">49 ขวด/กล่อง · 6 กล่อง/ชั้น · 8 ชั้น/พาเลท (2,352 ขวด/พาเลท)</span>
       </div>
 
@@ -495,19 +497,19 @@
         </div>
 
         <div class="vis-card">
-          <span class="vis-card-title" id="labelPartialLayer">2. ชั้นเต็ม</span>
+          <span class="vis-card-title" id="labelPartialLayer">2. พาเลทเศษ</span>
           <div class="vis-area">
             <div class="layer-column" id="layerVisualContainer"></div>
           </div>
         </div>
 
         <div class="vis-card">
-          <span class="vis-card-title" id="labelLayerBoxes">3. กล่องบนชั้นเศษ</span>
+          <span class="vis-card-title" id="labelLayerBoxes">3. เศษกล่อง</span>
           <div class="vis-area" id="boxVisualContainer"></div>
         </div>
 
         <div class="vis-card">
-          <span class="vis-card-title" id="labelLoose">4. เศษขวดปลีก</span>
+          <span class="vis-card-title" id="labelLoose">4. เศษขวด</span>
           <div class="vis-area" style="flex-direction: column;">
             <span class="loose-num" id="visLooseNum">0</span>
             <span class="loose-txt">ขวด</span>
@@ -534,19 +536,19 @@
             <td style="text-align: right; font-weight: 800;" id="tblPalletTotal">0</td>
           </tr>
           <tr>
-            <td style="font-weight: 800;">ชั้นเต็มในพาเลทสุดท้าย (Layers)</td>
+            <td style="font-weight: 800;">พาเลทเศษ (Partial Pallet)</td>
             <td style="text-align: center;" id="tblLayerUnits">0 ชั้น</td>
             <td style="text-align: right;" id="tblLayerCap">294 ขวด</td>
             <td style="text-align: right; font-weight: 800;" id="tblLayerTotal">0</td>
           </tr>
           <tr>
-            <td style="font-weight: 800;">เศษกล่องในชั้นบนสุด (Boxes)</td>
+            <td style="font-weight: 800;">เศษกล่อง (Extra Boxes)</td>
             <td style="text-align: center;" id="tblBoxUnits">0 กล่อง</td>
             <td style="text-align: right;" id="tblBoxCap">49 ขวด</td>
             <td style="text-align: right; font-weight: 800;" id="tblBoxTotal">0</td>
           </tr>
           <tr>
-            <td style="font-weight: 800;">เศษขวดปลีก (Bottles)</td>
+            <td style="font-weight: 800;">เศษขวด (Loose Bottles)</td>
             <td style="text-align: center;" id="tblLooseUnits">0 ขวด</td>
             <td style="text-align: right;">1 ขวด</td>
             <td style="text-align: right; font-weight: 800;" id="tblLooseTotal">0</td>
@@ -559,9 +561,9 @@
       </table>
     </div>
 
-    <!-- ส่วนกล้องถ่ายภาพหน้างาน (Camera Section) -->
+    <!-- Camera Section -->
     <div class="camera-panel">
-      <div class="section-tag">บันทึกภาพถ่ายหน้างาน (Output Photo)</div>
+      <div class="section-tag">บันทึกภาพถ่ายหน้างาน (Output Photo) <span style="color: #ef4444;">* จำเป็นต้องถ่าย</span></div>
       
       <div class="camera-btn-group">
         <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display: none;">
@@ -574,16 +576,16 @@
         </button>
       </div>
 
-      <!-- แกลเลอรีรูปถ่าย -->
+      <!-- Gallery -->
       <div id="photoGallery" class="photo-gallery">
-        <div class="photo-empty" id="photoEmptyText">ยังไม่มีรูปถ่าย กดปุ่มด้านบนเพื่อเปิดกล้องถ่ายภาพหน้างาน</div>
+        <div class="photo-empty" id="photoEmptyText">ยังไม่มีรูปถ่าย กรุณากดถ่ายภาพหน้างานเพื่อเปิดใช้งานปุ่มส่งรายงาน</div>
       </div>
     </div>
 
-    <!-- ส่วนปุ่มส่งรายงานเข้า LINE และบันทึกข้อมูล -->
+    <!-- Submit Action -->
     <div class="submit-panel">
-      <button type="button" id="btnSubmitReport" class="btn-submit" onclick="sendReportToBackend()">
-        <span>🚀 ยืนยันยอดและส่งรายงานเข้า LINE</span>
+      <button type="button" id="btnSubmitReport" class="btn-submit" onclick="sendReportToBackend()" disabled>
+        <span id="btnSubmitText">📸 กรุณาถ่ายภาพหน้างานก่อนส่งรายงาน</span>
       </button>
       <div id="statusMessage" class="status-msg"></div>
     </div>
@@ -591,7 +593,6 @@
   </div>
 
   <script>
-    // ⚙️ Web App Gateway ล่าสุด (SBY14 ja)
     const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzD8Qo18MJ2zR7E_6dWvfNRQOx0DMMJoE1FrJX4FQXBUxa8-OloDBJbndcb3-hGJoEl/exec";
 
     const spec = {
@@ -648,10 +649,10 @@
       document.getElementById('labelPalletStack').textContent = `1. พาเลทเต็ม (${fullPallets.toLocaleString()})`;
       document.getElementById('visPalletNum').textContent = fullPallets.toLocaleString();
 
-      document.getElementById('labelPartialLayer').textContent = `2. ชั้นเต็ม (${partialLayers}/${spec.layerPerPal} ชั้น)`;
+      document.getElementById('labelPartialLayer').textContent = `2. พาเลทเศษ (${partialLayers}/${spec.layerPerPal} ชั้น)`;
       renderLayerVisual(partialLayers, spec.layerPerPal);
 
-      document.getElementById('labelLayerBoxes').textContent = `3. กล่อง (${extraBoxes}/6)`;
+      document.getElementById('labelLayerBoxes').textContent = `3. เศษกล่อง (${extraBoxes}/6)`;
       renderBoxVisual(extraBoxes, looseBottles);
 
       document.getElementById('labelLoose').textContent = `4. เศษขวด (${looseBottles})`;
@@ -738,11 +739,24 @@
       container.appendChild(wrap);
     }
 
-    // Camera Handler
+    // Camera Handler & Mandatory Control
     const cameraInput = document.getElementById('cameraInput');
     const photoGallery = document.getElementById('photoGallery');
     const photoEmptyText = document.getElementById('photoEmptyText');
+    const submitBtn = document.getElementById('btnSubmitReport');
+    const submitBtnText = document.getElementById('btnSubmitText');
     let capturedImages = [];
+
+    // ตรวจสอบและควบคุมสถานะปุ่มส่ง
+    function checkPhotoRequirement() {
+      if (capturedImages.length > 0) {
+        submitBtn.disabled = false;
+        submitBtnText.textContent = '🚀 ยืนยันยอดและส่งรายงานเข้า LINE';
+      } else {
+        submitBtn.disabled = true;
+        submitBtnText.textContent = '📸 กรุณาถ่ายภาพหน้างานก่อนส่งรายงาน';
+      }
+    }
 
     cameraInput.addEventListener('change', function(e) {
       const file = e.target.files[0];
@@ -773,6 +787,7 @@
           const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.7);
           capturedImages.push(compressedDataUrl);
           updatePhotoGallery();
+          checkPhotoRequirement(); // ปลดล็อกปุ่มส่งทันที
         };
         img.src = event.target.result;
       };
@@ -814,16 +829,31 @@
     function deletePhoto(index) {
       capturedImages.splice(index, 1);
       updatePhotoGallery();
+      checkPhotoRequirement(); // ถ้าลบรูปออกจนหมด ให้กลับไปล็อกปุ่ม
+    }
+
+    function resetForm() {
+      volumeSlider.value = 0;
+      volumeInput.value = 0;
+      capturedImages = [];
+      updatePhotoGallery();
+      checkPhotoRequirement(); // รีเซ็ตสถานะปุ่มกลับเป็นล็อก
+      calculate();
     }
 
     // Send payload to Web App
     async function sendReportToBackend() {
-      const submitBtn = document.getElementById('btnSubmitReport');
       const statusMsg = document.getElementById('statusMessage');
       const targetDemand = parseInt(volumeInput.value) || 0;
 
       if (targetDemand <= 0) {
-        alert('กรุณาระบุยอดผลิตเป้าหมายก่อนส่งรายงาน');
+        alert('⚠️ กรุณาระบุยอดผลิตเป้าหมายก่อนส่งรายงาน');
+        return;
+      }
+
+      // ตรวจสอบเงื่อนไขรูปถ่ายซ้ำอีกชั้นเพื่อความปลอดภัยสูงสุด
+      if (capturedImages.length === 0) {
+        alert('⚠️ กรุณาถ่ายภาพพาเลท/สินค้าหน้างานอย่างน้อย 1 รูป ก่อนส่งรายงาน');
         return;
       }
 
@@ -834,7 +864,7 @@
         partialLayers: document.getElementById('tblLayerUnits').textContent,
         extraBoxes: document.getElementById('tblBoxUnits').textContent,
         looseBottles: document.getElementById('tblLooseUnits').textContent,
-        image: capturedImages.length > 0 ? capturedImages[0] : null
+        image: capturedImages[0]
       };
 
       submitBtn.disabled = true;
@@ -852,8 +882,9 @@
         statusMsg.className = 'status-msg success';
         statusMsg.textContent = '✅ ส่งรายงานยอดผลิตเข้ากลุ่ม LINE เรียบร้อยแล้ว!';
         
+        resetForm();
+
         setTimeout(() => {
-          submitBtn.disabled = false;
           statusMsg.className = 'status-msg';
           statusMsg.textContent = '';
         }, 3500);
@@ -862,11 +893,12 @@
         console.error(err);
         statusMsg.className = 'status-msg error';
         statusMsg.textContent = '❌ เกิดข้อผิดพลาดในการส่งข้อมูล กรุณาลองใหม่อีกครั้ง';
-        submitBtn.disabled = false;
+        checkPhotoRequirement();
       }
     }
 
     calculate();
+    checkPhotoRequirement();
   </script>
 </body>
 </html>
