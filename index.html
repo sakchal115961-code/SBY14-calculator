@@ -153,7 +153,7 @@
     }
     .vis-header { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; }
     .vis-header .title { font-size: 13px; font-weight: 800; color: #1e293b; }
-    .vis-header .badge { font-size: 11px; font-weight: 600; background: #f8fafc; border: 1px solid #cbd5e1; padding: 4px 8px; border-radius: 6px; color: #475569; display: inline-block; }
+    .badge { font-size: 11px; font-weight: 600; background: #f8fafc; border: 1px solid #cbd5e1; padding: 4px 8px; border-radius: 6px; color: #475569; display: inline-block; }
 
     .vis-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
     .vis-card { text-align: center; }
@@ -275,7 +275,7 @@
     tr.total-row td { color: #0f172a; font-size: 13px; padding: 10px; }
     .total-val { color: var(--primary); font-size: 15px; font-weight: 900; }
 
-    /* --- สไตล์ส่วนกล้องถ่ายภาพ (Camera Section) --- */
+    /* Camera Section */
     .camera-panel {
       background: #ffffff;
       border: 1px solid var(--border);
@@ -374,7 +374,7 @@
       border-radius: 10px;
     }
 
-    /* --- สไตล์ปุ่มส่งรายงานเข้า LINE (Action Submission) --- */
+    /* Submit Section */
     .submit-panel {
       margin-top: 20px;
       display: flex;
@@ -591,7 +591,7 @@
   </div>
 
   <script>
-    // ⚙️ URL ปลายทางของ Google Apps Script Web App (เชื่อมต่อโปรเจกต์ SBY14 ja ตัวล่าสุด)
+    // ⚙️ Web App Gateway ล่าสุด (SBY14 ja)
     const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzD8Qo18MJ2zR7E_6dWvfNRQOx0DMMJoE1FrJX4FQXBUxa8-OloDBJbndcb3-hGJoEl/exec";
 
     const spec = {
@@ -738,7 +738,7 @@
       container.appendChild(wrap);
     }
 
-    // --- ระบบจัดการกล้องและการบีบอัดรูปภาพ (Client-Side Compression) ---
+    // Camera Handler
     const cameraInput = document.getElementById('cameraInput');
     const photoGallery = document.getElementById('photoGallery');
     const photoEmptyText = document.getElementById('photoEmptyText');
@@ -816,7 +816,7 @@
       updatePhotoGallery();
     }
 
-    // --- ฟังก์ชันส่งรายงานไปยัง Google Apps Script Web App ---
+    // Send payload to Web App
     async function sendReportToBackend() {
       const submitBtn = document.getElementById('btnSubmitReport');
       const statusMsg = document.getElementById('statusMessage');
