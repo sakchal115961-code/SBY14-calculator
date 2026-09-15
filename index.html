@@ -16,6 +16,7 @@
       --text-muted: #64748b;
       --border: #e2e8f0;
       --red-bottle: #ef4444;
+      --success: #16a34a;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Sarabun", sans-serif; }
@@ -107,18 +108,18 @@
       height: 6px; 
       cursor: pointer; 
     }
-    .input-val-box {
+    .input-val-box { 
       width: 125px; 
-      flex-shrink: 0;
-      text-align: right;
-      font-size: 20px;
-      font-weight: 900;
-      padding: 6px 10px;
-      border-radius: 12px;
-      border: 1.5px solid #cbd5e1;
-      background: #ffffff;
-      color: #0f172a;
-      outline: none;
+      flex-shrink: 0; 
+      text-align: right; 
+      font-size: 20px; 
+      font-weight: 900; 
+      padding: 6px 10px; 
+      border-radius: 12px; 
+      border: 1.5px solid #cbd5e1; 
+      background: #ffffff; 
+      color: #0f172a; 
+      outline: none; 
     }
     .input-val-box:focus { border-color: var(--primary); }
 
@@ -128,12 +129,12 @@
       gap: 8px; 
       margin-bottom: 16px; 
     }
-    .sum-card {
-      padding: 10px 8px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: #ffffff;
-      text-align: left;
+    .sum-card { 
+      padding: 10px 8px; 
+      border-radius: 14px; 
+      border: 1px solid var(--border); 
+      background: #ffffff; 
+      text-align: left; 
     }
     .sum-card.highlight { background: #eff6ff; border-color: #bfdbfe; }
     .sum-card .card-title { font-size: 10px; font-weight: 800; color: var(--text-muted); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -143,12 +144,12 @@
     .sum-card .card-sub { font-size: 10px; font-weight: 600; color: #94a3b8; white-space: nowrap; }
     .sum-card.highlight .card-sub { color: #3b82f6; }
 
-    .vis-box {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      padding: 14px;
-      border-radius: 16px;
-      margin-bottom: 16px;
+    .vis-box { 
+      background: #ffffff; 
+      border: 1px solid var(--border); 
+      padding: 14px; 
+      border-radius: 16px; 
+      margin-bottom: 16px; 
     }
     .vis-header { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; }
     .vis-header .title { font-size: 13px; font-weight: 800; color: #1e293b; }
@@ -157,28 +158,28 @@
     .vis-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
     .vis-card { text-align: center; }
     .vis-card-title { font-size: 11px; font-weight: 800; color: #475569; display: block; margin-bottom: 6px; white-space: nowrap; }
-    .vis-area {
-      height: 155px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4px;
-      overflow: hidden;
+    .vis-area { 
+      height: 155px; 
+      background: #f8fafc; 
+      border: 1px solid #e2e8f0; 
+      border-radius: 12px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      padding: 4px; 
+      overflow: hidden; 
     }
 
-    .pallet-cube {
-      width: 65px;
-      height: 80px;
-      border: 1.5px solid #60a5fa;
-      background: #eff6ff;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .pallet-cube { 
+      width: 65px; 
+      height: 80px; 
+      border: 1.5px solid #60a5fa; 
+      background: #eff6ff; 
+      border-radius: 8px; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center; 
     }
     .pallet-cube .num { font-size: 20px; font-weight: 900; color: var(--primary); }
     .pallet-cube .txt { font-size: 9px; font-weight: 800; color: #60a5fa; }
@@ -188,16 +189,15 @@
     .layer-bar.active { background: var(--primary); color: #ffffff; }
     .layer-bar.inactive { background: #e2e8f0; color: #94a3b8; }
 
-    /* ผังกล่องและวงกลมขวด 7x7 แบบขัดฟันปลา */
     .pallet-layout-container { 
       border: 1.5px dashed #94a3b8; 
       border-radius: 8px; 
       padding: 3px; 
       background: #ffffff; 
-      display: grid;
-      grid-template-columns: repeat(3, 42px);
-      grid-template-rows: repeat(2, 58px);
-      gap: 3px;
+      display: grid; 
+      grid-template-columns: repeat(3, 42px); 
+      grid-template-rows: repeat(2, 58px); 
+      gap: 3px; 
     }
 
     .box-cell { 
@@ -208,8 +208,8 @@
       display: flex; 
       align-items: center; 
       justify-content: center; 
-      position: relative;
-      overflow: hidden;
+      position: relative; 
+      overflow: hidden; 
     }
     .box-cell.full { 
       background: #3b82f6; 
@@ -221,55 +221,53 @@
       color: #cbd5e1; 
     }
 
-    /* สไตล์กล่องเศษ: แสดง 7 แถว x 7 ช่อง สลับฟันปลา */
-    .box-cell.partial {
-      background: #eff6ff;
-      border: 1.5px solid #2563eb;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2px 1px;
+    .box-cell.partial { 
+      background: #eff6ff; 
+      border: 1.5px solid #2563eb; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      padding: 2px 1px; 
     }
 
-    .honeycomb-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5px;
-      width: 100%;
-      align-items: center;
+    .honeycomb-grid { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 1.5px; 
+      width: 100%; 
+      align-items: center; 
     }
 
-    .honeycomb-row {
-      display: flex;
-      gap: 1.5px;
-      justify-content: center;
+    .honeycomb-row { 
+      display: flex; 
+      gap: 1.5px; 
+      justify-content: center; 
     }
-    /* แถวคู่เยื้องหลบแบบสลับฟันปลา */
-    .honeycomb-row:nth-child(even) {
-      transform: translateX(1.5px);
+    .honeycomb-row:nth-child(even) { 
+      transform: translateX(1.5px); 
     }
 
-    .slot {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      flex-shrink: 0;
+    .slot { 
+      width: 4px; 
+      height: 4px; 
+      border-radius: 50%; 
+      flex-shrink: 0; 
     }
-    .slot.filled {
-      background-color: var(--red-bottle);
-      border: 0.5px solid #991b1b;
-      box-shadow: 0 0 1px rgba(0,0,0,0.4);
+    .slot.filled { 
+      background-color: var(--red-bottle); 
+      border: 0.5px solid #991b1b; 
+      box-shadow: 0 0 1px rgba(0,0,0,0.4); 
     }
-    .slot.empty {
-      background-color: #dbeafe;
-      border: 0.5px dotted #93c5fd;
+    .slot.empty { 
+      background-color: #dbeafe; 
+      border: 0.5px dotted #93c5fd; 
     }
 
     .loose-num { font-size: 28px; font-weight: 900; color: #334155; line-height: 1; }
     .loose-txt { font-size: 10px; font-weight: 700; color: #94a3b8; margin-top: 4px; }
 
-    .table-card { border-radius: 14px; border: 1px solid var(--border); overflow-x: auto; }
+    .table-card { border-radius: 14px; border: 1px solid var(--border); overflow-x: auto; margin-bottom: 16px; }
     table { width: 100%; border-collapse: collapse; font-size: 12px; background: #ffffff; min-width: 320px; }
     th { background: #f8fafc; color: #475569; font-size: 10px; font-weight: 800; padding: 8px 10px; border-bottom: 1px solid var(--border); }
     td { padding: 8px 10px; border-bottom: 1px solid #f1f5f9; color: #334155; font-weight: 600; }
@@ -277,12 +275,156 @@
     tr.total-row td { color: #0f172a; font-size: 13px; padding: 10px; }
     .total-val { color: var(--primary); font-size: 15px; font-weight: 900; }
 
+    /* --- สไตล์ส่วนกล้องถ่ายภาพ (Camera Section) --- */
+    .camera-panel {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      margin-bottom: 16px;
+    }
+    .camera-btn-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .btn-camera {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 10px 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+      transition: all 0.2s;
+    }
+    .btn-camera:active {
+      transform: scale(0.97);
+      background: var(--primary-dark);
+    }
+    .btn-camera svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .photo-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1.5px solid var(--border);
+      background: #f8fafc;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .btn-delete-photo {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: rgba(239, 68, 68, 0.9);
+      color: #ffffff;
+      border: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+    .photo-badge {
+      position: absolute;
+      bottom: 4px;
+      left: 4px;
+      background: rgba(15, 23, 42, 0.75);
+      color: #ffffff;
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+    .photo-empty {
+      font-size: 12px;
+      color: #94a3b8;
+      text-align: center;
+      padding: 16px;
+      border: 1.5px dashed #cbd5e1;
+      border-radius: 10px;
+    }
+
+    /* --- สไตล์ปุ่มส่งรายงานเข้า LINE (Action Submission) --- */
+    .submit-panel {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .btn-submit {
+      width: 100%;
+      background: var(--success);
+      color: #ffffff;
+      border: none;
+      padding: 16px 20px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+    .btn-submit:active { transform: scale(0.98); }
+    .btn-submit:disabled {
+      background: #94a3b8;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+    .status-msg {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px;
+      border-radius: 10px;
+      display: none;
+    }
+    .status-msg.sending { display: block; background: #eff6ff; color: #1d4ed8; }
+    .status-msg.success { display: block; background: #f0fdf4; color: #15803d; }
+    .status-msg.error { display: block; background: #fef2f2; color: #b91c1c; }
+
     @media (max-width: 640px) {
       .dashboard-container { padding: 14px 12px; }
       .header-bar { flex-direction: column; align-items: flex-start; }
       .summary-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
       .vis-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
       .input-val-box { width: 110px; font-size: 18px; }
+      .photo-gallery { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+      .btn-submit { font-size: 15px; padding: 14px; }
     }
   </style>
 </head>
@@ -417,9 +559,41 @@
       </table>
     </div>
 
+    <!-- ส่วนกล้องถ่ายภาพหน้างาน (Camera Section) -->
+    <div class="camera-panel">
+      <div class="section-tag">บันทึกภาพถ่ายหน้างาน (Output Photo)</div>
+      
+      <div class="camera-btn-group">
+        <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display: none;">
+        
+        <button type="button" class="btn-camera" onclick="document.getElementById('cameraInput').click()">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+          </svg>
+          ถ่ายภาพพาเลท / สินค้าจริง
+        </button>
+      </div>
+
+      <!-- แกลเลอรีรูปถ่าย -->
+      <div id="photoGallery" class="photo-gallery">
+        <div class="photo-empty" id="photoEmptyText">ยังไม่มีรูปถ่าย กดปุ่มด้านบนเพื่อเปิดกล้องถ่ายภาพหน้างาน</div>
+      </div>
+    </div>
+
+    <!-- ส่วนปุ่มส่งรายงานเข้า LINE และบันทึกข้อมูล -->
+    <div class="submit-panel">
+      <button type="button" id="btnSubmitReport" class="btn-submit" onclick="sendReportToBackend()">
+        <span>🚀 ยืนยันยอดและส่งรายงานเข้า LINE</span>
+      </button>
+      <div id="statusMessage" class="status-msg"></div>
+    </div>
+
   </div>
 
   <script>
+    // ⚙️ URL ปลายทางของ Google Apps Script Web App
+    const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxX6imiGB6U3PcTFKNYH_fJ3UA7fYq--yyHTLPnCtNJ5o92GYSgEKJDyhp5KoZTJHxP/exec";
+
     const spec = {
       name: 'ขนาด 200',
       layerPerPal: 8,
@@ -513,7 +687,6 @@
       }
     }
 
-    // ฟังก์ชันวาดกล่อง 6 ใบ พร้อมวางเรียงขวดทีละแถว (7x7) ขัดฟันปลา
     function renderBoxVisual(fullBoxes, looseBottles) {
       const container = document.getElementById('boxVisualContainer');
       container.innerHTML = '';
@@ -525,11 +698,9 @@
         const cell = document.createElement('div');
 
         if (i <= fullBoxes) {
-          // 1. กล่องเต็ม 49 ขวด
           cell.className = 'box-cell full';
           cell.textContent = i;
         } else if (i === fullBoxes + 1 && looseBottles > 0) {
-          // 2. กล่องเศษ: วาดตาราง 7 แถว แถวละ 7 ช่อง เรียงทีละแถว
           cell.className = 'box-cell partial';
 
           const grid = document.createElement('div');
@@ -537,20 +708,18 @@
 
           let bottleCount = 0;
 
-          // วนลูปสร้าง 7 แถว
           for (let r = 0; r < 7; r++) {
             const row = document.createElement('div');
             row.className = 'honeycomb-row';
 
-            // วนลูปสร้าง 7 ช่องในแต่ละแถว
             for (let c = 0; c < 7; c++) {
               bottleCount++;
               const slot = document.createElement('div');
               
               if (bottleCount <= looseBottles) {
-                slot.className = 'slot filled'; // มีขวดสีแดง
+                slot.className = 'slot filled';
               } else {
-                slot.className = 'slot empty';  // ช่องว่างจุดไข่ปลา
+                slot.className = 'slot empty';
               }
               row.appendChild(slot);
             }
@@ -558,9 +727,7 @@
           }
 
           cell.appendChild(grid);
-
         } else {
-          // 3. กล่องว่างที่ยังไม่ได้วาง
           cell.className = 'box-cell empty';
           cell.textContent = i;
         }
@@ -569,6 +736,139 @@
       }
 
       container.appendChild(wrap);
+    }
+
+    // --- ระบบจัดการกล้องและการบีบอัดรูปภาพ (Client-Side Compression) ---
+    const cameraInput = document.getElementById('cameraInput');
+    const photoGallery = document.getElementById('photoGallery');
+    const photoEmptyText = document.getElementById('photoEmptyText');
+    let capturedImages = [];
+
+    cameraInput.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      // ทำการย่อขนาดภาพด้วย Canvas เพื่อลดขนาดไฟล์ก่อนส่ง
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          const canvas = document.createElement('canvas');
+          let width = img.width;
+          let height = img.height;
+          const maxDim = 1024; // ด้านกว้างสุดไม่เกิน 1024px
+
+          if (width > height && width > maxDim) {
+            height = Math.round((height * maxDim) / width);
+            width = maxDim;
+          } else if (height > maxDim) {
+            width = Math.round((width * maxDim) / height);
+            height = maxDim;
+          }
+
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, width, height);
+
+          // แปลงเป็น JPEG คุณภาพ 70% (~150-200KB)
+          const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.7);
+          capturedImages.push(compressedDataUrl);
+          updatePhotoGallery();
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+
+      this.value = ''; // รีเซ็ต input
+    });
+
+    function updatePhotoGallery() {
+      photoGallery.innerHTML = '';
+      if (capturedImages.length === 0) {
+        photoGallery.appendChild(photoEmptyText);
+        return;
+      }
+
+      capturedImages.forEach((imgSrc, index) => {
+        const card = document.createElement('div');
+        card.className = 'photo-card';
+
+        const img = document.createElement('img');
+        img.src = imgSrc;
+
+        const badge = document.createElement('span');
+        badge.className = 'photo-badge';
+        badge.textContent = `รูปที่ ${index + 1}`;
+
+        const delBtn = document.createElement('button');
+        delBtn.className = 'btn-delete-photo';
+        delBtn.innerHTML = '✕';
+        delBtn.onclick = () => deletePhoto(index);
+
+        card.appendChild(img);
+        card.appendChild(badge);
+        card.appendChild(delBtn);
+        photoGallery.appendChild(card);
+      });
+    }
+
+    function deletePhoto(index) {
+      capturedImages.splice(index, 1);
+      updatePhotoGallery();
+    }
+
+    // --- ฟังก์ชันส่งรายงานไปยัง Google Apps Script Web App ---
+    async function sendReportToBackend() {
+      const submitBtn = document.getElementById('btnSubmitReport');
+      const statusMsg = document.getElementById('statusMessage');
+      const targetDemand = parseInt(volumeInput.value) || 0;
+
+      if (targetDemand <= 0) {
+        alert('กรุณาระบุยอดผลิตเป้าหมายก่อนส่งรายงาน');
+        return;
+      }
+
+      // เตรียมข้อมูล Payload
+      const payload = {
+        sku: spec.name,
+        targetDemand: targetDemand,
+        fullPallets: document.getElementById('tblPalletUnits').textContent,
+        partialLayers: document.getElementById('tblLayerUnits').textContent,
+        extraBoxes: document.getElementById('tblBoxUnits').textContent,
+        looseBottles: document.getElementById('tblLooseUnits').textContent,
+        image: capturedImages.length > 0 ? capturedImages[0] : null
+      };
+
+      // ล็อกปุ่มและแสดงสถานะ
+      submitBtn.disabled = true;
+      statusMsg.className = 'status-msg sending';
+      statusMsg.textContent = '⏳ กำลังบันทึกข้อมูลและส่งรายงานเข้า LINE...';
+
+      try {
+        await fetch(GAS_WEB_APP_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        // ส่งสำเร็จ
+        statusMsg.className = 'status-msg success';
+        statusMsg.textContent = '✅ ส่งรายงานยอดผลิตเข้ากลุ่ม LINE เรียบร้อยแล้ว!';
+        
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          statusMsg.className = 'status-msg';
+          statusMsg.textContent = '';
+        }, 3500);
+
+      } catch (err) {
+        console.error(err);
+        statusMsg.className = 'status-msg error';
+        statusMsg.textContent = '❌ เกิดข้อผิดพลาดในการส่งข้อมูล กรุณาลองใหม่อีกครั้ง';
+        submitBtn.disabled = false;
+      }
     }
 
     calculate();
