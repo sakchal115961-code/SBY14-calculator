@@ -40,14 +40,14 @@
       box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05); 
     }
 
-    .header-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      border-bottom: 2px solid #f1f5f9;
-      padding-bottom: 14px;
-      margin-bottom: 16px;
-      gap: 8px;
+    .header-bar { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: flex-start; 
+      border-bottom: 2px solid #f1f5f9; 
+      padding-bottom: 14px; 
+      margin-bottom: 16px; 
+      gap: 8px; 
     }
     .header-titles h1 { font-size: 20px; font-weight: 800; color: #0f172a; line-height: 1.25; }
     .header-titles p { font-size: 12px; color: var(--text-muted); margin-top: 3px; font-weight: 500; }
@@ -59,56 +59,45 @@
       font-weight: 800; 
       padding: 4px 10px; 
       border-radius: 12px; 
-      white-space: nowrap;
+      white-space: nowrap; 
     }
 
-    .control-panel {
-      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
-      border: 1px solid var(--border);
-      padding: 14px;
-      border-radius: 16px;
-      margin-bottom: 16px;
+    .control-panel { 
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); 
+      border: 1px solid var(--border); 
+      padding: 14px; 
+      border-radius: 16px; 
+      margin-bottom: 16px; 
     }
 
-    .section-tag {
-      font-size: 11px;
-      font-weight: 800;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+    .section-tag { 
+      font-size: 11px; 
+      font-weight: 800; 
+      color: var(--text-muted); 
+      text-transform: uppercase; 
+      margin-bottom: 10px; 
+      display: flex; 
+      align-items: center; 
+      gap: 6px; 
     }
     .section-tag::before { content: ""; width: 3px; height: 11px; background: var(--primary); border-radius: 2px; }
 
-    .sku-card-single {
-      background: #ffffff;
-      border: 2px solid var(--primary);
-      border-radius: 14px;
-      padding: 12px 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 14px;
-      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    .sku-card-single { 
+      background: #ffffff; 
+      border: 2px solid var(--primary); 
+      border-radius: 14px; 
+      padding: 12px 16px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 14px; 
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15); 
     }
     .sku-card-single .title { font-size: 16px; font-weight: 800; color: var(--primary-dark); }
     .sku-card-single .spec { font-size: 12px; font-weight: 700; color: var(--primary); }
 
-    .input-row { 
-      display: flex; 
-      align-items: center; 
-      gap: 10px; 
-      width: 100%;
-    }
-    .slider-track { 
-      flex: 1; 
-      min-width: 0; 
-      accent-color: var(--primary); 
-      height: 6px; 
-      cursor: pointer; 
-    }
+    .input-row { display: flex; align-items: center; gap: 10px; width: 100%; }
+    .slider-track { flex: 1; min-width: 0; accent-color: var(--primary); height: 6px; cursor: pointer; }
     .input-val-box { 
       width: 125px; 
       flex-shrink: 0; 
@@ -124,19 +113,8 @@
     }
     .input-val-box:focus { border-color: var(--primary); }
 
-    .summary-grid { 
-      display: grid; 
-      grid-template-columns: repeat(4, 1fr); 
-      gap: 8px; 
-      margin-bottom: 16px; 
-    }
-    .sum-card { 
-      padding: 10px 8px; 
-      border-radius: 14px; 
-      border: 1px solid var(--border); 
-      background: #ffffff; 
-      text-align: left; 
-    }
+    .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
+    .sum-card { padding: 10px 8px; border-radius: 14px; border: 1px solid var(--border); background: #ffffff; text-align: left; }
     .sum-card.highlight { background: #eff6ff; border-color: #bfdbfe; }
     .sum-card .card-title { font-size: 10px; font-weight: 800; color: var(--text-muted); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .sum-card.highlight .card-title { color: var(--primary); }
@@ -145,43 +123,16 @@
     .sum-card .card-sub { font-size: 10px; font-weight: 600; color: #94a3b8; white-space: nowrap; }
     .sum-card.highlight .card-sub { color: #3b82f6; }
 
-    .vis-box { 
-      background: #ffffff; 
-      border: 1px solid var(--border); 
-      padding: 14px; 
-      border-radius: 16px; 
-      margin-bottom: 16px; 
-    }
+    .vis-box { background: #ffffff; border: 1px solid var(--border); padding: 14px; border-radius: 16px; margin-bottom: 16px; }
     .vis-header { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; }
-    .vis-header .title { font-size: 13px; font-weight: 800; color: #1e293b; }
-    .badge { font-size: 11px; font-weight: 600; background: #f8fafc; border: 1px solid #cbd5e1; padding: 4px 8px; border-radius: 6px; color: #475569; display: inline-block; }
+    .badge { font-size: 11px; font-weight: 600; background: #f8fafc; border: 1px solid #cbd5e1; padding: 4px 8px; border-radius: 6px; color: #475569; display: inline-block; width: fit-content; }
 
     .vis-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
     .vis-card { text-align: center; }
     .vis-card-title { font-size: 11px; font-weight: 800; color: #475569; display: block; margin-bottom: 6px; white-space: nowrap; }
-    .vis-area { 
-      height: 155px; 
-      background: #f8fafc; 
-      border: 1px solid #e2e8f0; 
-      border-radius: 12px; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      padding: 4px; 
-      overflow: hidden; 
-    }
+    .vis-area { height: 155px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 4px; overflow: hidden; }
 
-    .pallet-cube { 
-      width: 65px; 
-      height: 80px; 
-      border: 1.5px solid #60a5fa; 
-      background: #eff6ff; 
-      border-radius: 8px; 
-      display: flex; 
-      flex-direction: column; 
-      align-items: center; 
-      justify-content: center; 
-    }
+    .pallet-cube { width: 65px; height: 80px; border: 1.5px solid #60a5fa; background: #eff6ff; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
     .pallet-cube .num { font-size: 20px; font-weight: 900; color: var(--primary); }
     .pallet-cube .txt { font-size: 9px; font-weight: 800; color: #60a5fa; }
 
@@ -190,83 +141,41 @@
     .layer-bar.active { background: var(--primary); color: #ffffff; }
     .layer-bar.inactive { background: #e2e8f0; color: #94a3b8; }
 
-    .pallet-layout-container { 
-      border: 1.5px dashed #94a3b8; 
-      border-radius: 8px; 
-      padding: 3px; 
-      background: #ffffff; 
-      display: grid; 
-      grid-template-columns: repeat(3, 42px); 
-      grid-template-rows: repeat(2, 58px); 
-      gap: 3px; 
-    }
+    .pallet-layout-container { border: 1.5px dashed #94a3b8; border-radius: 8px; padding: 3px; background: #ffffff; display: grid; grid-template-columns: repeat(3, 42px); grid-template-rows: repeat(2, 58px); gap: 3px; }
+    .box-cell { border-radius: 4px; border: 1px solid #cbd5e1; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .box-cell.full { background: #3b82f6; border-color: var(--primary-dark); color: #ffffff; }
+    .box-cell.empty { background: #f8fafc; color: #cbd5e1; }
+    .box-cell.partial { background: #eff6ff; border: 1.5px solid #2563eb; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 1px; }
 
-    .box-cell { 
-      border-radius: 4px; 
-      border: 1px solid #cbd5e1; 
-      font-size: 12px; 
-      font-weight: 800; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      position: relative; 
-      overflow: hidden; 
-    }
-    .box-cell.full { 
-      background: #3b82f6; 
-      border-color: var(--primary-dark); 
-      color: #ffffff; 
-    }
-    .box-cell.empty { 
-      background: #f8fafc; 
-      color: #cbd5e1; 
-    }
-
-    .box-cell.partial { 
-      background: #eff6ff; 
-      border: 1.5px solid #2563eb; 
-      display: flex; 
-      flex-direction: column; 
-      justify-content: center; 
-      align-items: center; 
-      padding: 2px 1px; 
-    }
-
-    .honeycomb-grid { 
-      display: flex; 
-      flex-direction: column; 
-      gap: 1.5px; 
-      width: 100%; 
-      align-items: center; 
-    }
-
-    .honeycomb-row { 
-      display: flex; 
-      gap: 1.5px; 
-      justify-content: center; 
-    }
-    .honeycomb-row:nth-child(even) { 
-      transform: translateX(1.5px); 
-    }
-
-    .slot { 
-      width: 4px; 
-      height: 4px; 
-      border-radius: 50%; 
-      flex-shrink: 0; 
-    }
-    .slot.filled { 
-      background-color: var(--red-bottle); 
-      border: 0.5px solid #991b1b; 
-      box-shadow: 0 0 1px rgba(0,0,0,0.4); 
-    }
-    .slot.empty { 
-      background-color: #dbeafe; 
-      border: 0.5px dotted #93c5fd; 
-    }
-
+    .honeycomb-grid { display: flex; flex-direction: column; gap: 1.5px; width: 100%; align-items: center; }
+    .honeycomb-row { display: flex; gap: 1.5px; justify-content: center; }
+    .honeycomb-row:nth-child(even) { transform: translateX(1.5px); }
+    .slot { width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0; }
+    .slot.filled { background-color: var(--red-bottle); border: 0.5px solid #991b1b; box-shadow: 0 0 1px rgba(0,0,0,0.4); }
+    .slot.empty { background-color: #dbeafe; border: 0.5px dotted #93c5fd; }
     .loose-num { font-size: 28px; font-weight: 900; color: #334155; line-height: 1; }
     .loose-txt { font-size: 10px; font-weight: 700; color: #94a3b8; margin-top: 4px; }
+
+    /* Production Sheet Matching Section */
+    .compare-section { 
+      background: #ffffff; 
+      border: 1px solid var(--border); 
+      border-radius: 16px; 
+      padding: 14px; 
+      margin-bottom: 16px; 
+    }
+    .sheet-table-wrap { 
+      border: 1px solid #cbd5e1; 
+      border-radius: 12px; 
+      overflow-x: auto; 
+      background: #ffffff; 
+    }
+    .sheet-table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 320px; }
+    .sheet-table th { background: #eff6ff; color: #1d4ed8; font-size: 11px; font-weight: 800; padding: 10px 8px; border-bottom: 1px solid #bfdbfe; text-align: center; }
+    .sheet-table td { padding: 9px 8px; border-bottom: 1px solid #f1f5f9; color: #334155; text-align: center; font-weight: 600; }
+    .sheet-table tr:last-child td { border-bottom: none; }
+    .sheet-table .empty-msg { padding: 22px; color: var(--text-muted); font-size: 12px; font-weight: 600; text-align: center; }
+    .sheet-table tr.partial-row { background: #f8fafc; font-weight: 800; }
 
     .table-card { border-radius: 14px; border: 1px solid var(--border); overflow-x: auto; margin-bottom: 16px; }
     table { width: 100%; border-collapse: collapse; font-size: 12px; background: #ffffff; min-width: 320px; }
@@ -277,144 +186,24 @@
     .total-val { color: var(--primary); font-size: 15px; font-weight: 900; }
 
     /* Camera Section */
-    .camera-panel {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 14px;
-      margin-bottom: 16px;
-    }
-    .camera-btn-group {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
-    }
-    .btn-camera {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--primary);
-      color: #ffffff;
-      font-size: 13px;
-      font-weight: 800;
-      padding: 10px 18px;
-      border-radius: 12px;
-      cursor: pointer;
-      border: none;
-      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
-      transition: all 0.2s;
-    }
-    .btn-camera:active {
-      transform: scale(0.97);
-      background: var(--primary-dark);
-    }
-    .btn-camera svg {
-      width: 18px;
-      height: 18px;
-      fill: currentColor;
-    }
-    .photo-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .photo-card {
-      position: relative;
-      border-radius: 10px;
-      overflow: hidden;
-      border: 1.5px solid var(--border);
-      background: #f8fafc;
-      aspect-ratio: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-    }
-    .photo-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .btn-delete-photo {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      background: rgba(239, 68, 68, 0.9);
-      color: #ffffff;
-      border: none;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    }
-    .photo-badge {
-      position: absolute;
-      bottom: 4px;
-      left: 4px;
-      background: rgba(15, 23, 42, 0.75);
-      color: #ffffff;
-      font-size: 9px;
-      padding: 2px 6px;
-      border-radius: 6px;
-      font-weight: 700;
-    }
-    .photo-empty {
-      font-size: 12px;
-      color: #94a3b8;
-      text-align: center;
-      padding: 16px;
-      border: 1.5px dashed #cbd5e1;
-      border-radius: 10px;
-    }
+    .camera-panel { background: #ffffff; border: 1px solid var(--border); border-radius: 16px; padding: 14px; margin-bottom: 16px; }
+    .camera-btn-group { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+    .btn-camera { display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #ffffff; font-size: 13px; font-weight: 800; padding: 10px 18px; border-radius: 12px; cursor: pointer; border: none; box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25); transition: all 0.2s; }
+    .btn-camera:active { transform: scale(0.97); background: var(--primary-dark); }
+    .btn-camera svg { width: 18px; height: 18px; fill: currentColor; }
+    .photo-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-top: 10px; }
+    .photo-card { position: relative; border-radius: 10px; overflow: hidden; border: 1.5px solid var(--border); background: #f8fafc; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .photo-card img { width: 100%; height: 100%; object-fit: cover; }
+    .btn-delete-photo { position: absolute; top: 5px; right: 5px; background: rgba(239, 68, 68, 0.9); color: #ffffff; border: none; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+    .photo-badge { position: absolute; bottom: 4px; left: 4px; background: rgba(15, 23, 42, 0.75); color: #ffffff; font-size: 9px; padding: 2px 6px; border-radius: 6px; font-weight: 700; }
+    .photo-empty { font-size: 12px; color: #94a3b8; text-align: center; padding: 16px; border: 1.5px dashed #cbd5e1; border-radius: 10px; }
 
     /* Submit Section */
-    .submit-panel {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .btn-submit {
-      width: 100%;
-      background: var(--success);
-      color: #ffffff;
-      border: none;
-      padding: 16px 20px;
-      border-radius: 16px;
-      font-size: 16px;
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      transition: all 0.2s;
-    }
+    .submit-panel { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .btn-submit { width: 100%; background: var(--success); color: #ffffff; border: none; padding: 16px 20px; border-radius: 16px; font-size: 16px; font-weight: 900; cursor: pointer; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3); display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.2s; }
     .btn-submit:active { transform: scale(0.98); }
-    .btn-submit:disabled {
-      background: var(--disabled) !important;
-      cursor: not-allowed !important;
-      box-shadow: none !important;
-      transform: none !important;
-      opacity: 0.85;
-    }
-    .status-msg {
-      text-align: center;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 8px;
-      border-radius: 10px;
-      display: none;
-    }
+    .btn-submit:disabled { background: var(--disabled) !important; cursor: not-allowed !important; box-shadow: none !important; transform: none !important; opacity: 0.85; }
+    .status-msg { text-align: center; font-size: 13px; font-weight: 700; padding: 8px; border-radius: 10px; display: none; }
     .status-msg.sending { display: block; background: #eff6ff; color: #1d4ed8; }
     .status-msg.success { display: block; background: #f0fdf4; color: #15803d; }
     .status-msg.error { display: block; background: #fef2f2; color: #b91c1c; }
@@ -456,6 +245,7 @@
       </div>
     </div>
 
+    <!-- 4 KPI Cards -->
     <div class="summary-grid">
       <div class="sum-card highlight">
         <span class="card-title">พาเลทเต็ม</span>
@@ -479,9 +269,9 @@
       </div>
     </div>
 
+    <!-- 4 Visual Cards -->
     <div class="vis-box">
       <div class="vis-header">
-        <span class="title">ภาพจำลองการจัดเรียง (พาเลทเศษ)</span>
         <span class="badge" id="skuSpecLabel">49 ขวด/กล่อง · 6 กล่อง/ชั้น · 8 ชั้น/พาเลท (2,352 ขวด/พาเลท)</span>
       </div>
 
@@ -518,6 +308,29 @@
       </div>
     </div>
 
+    <!-- 📝 ตารางเทียบสำหรับกรอก "ใบแสดงจำนวนการผลิต" -->
+    <div class="compare-section">
+      <div class="section-tag">📝 ตารางเทียบสำหรับกรอก "ใบแสดงจำนวนการผลิต"</div>
+      <div class="sheet-table-wrap">
+        <table class="sheet-table">
+          <thead>
+            <tr>
+              <th style="width: 20%;">พาเลทที่</th>
+              <th style="width: 25%;">จำนวนลัง (กล่อง)</th>
+              <th style="width: 25%;">จำนวนขวด</th>
+              <th style="width: 30%;">หมายเหตุ</th>
+            </tr>
+          </thead>
+          <tbody id="sheetTableBody">
+            <tr>
+              <td colspan="4" class="empty-msg">ยังไม่มียอดผลิตเป้าหมาย</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ตารางสรุปรายการเดิม -->
     <div class="table-card">
       <table>
         <thead>
@@ -599,25 +412,26 @@
       name: 'ขนาด 200',
       layerPerPal: 8,
       boxPerLayer: 6,
-      btlPerBox: 49
+      btlPerBox: 49,
+      boxesPerPal: 48,
+      btlPerPal: 2352
     };
 
     const volumeSlider = document.getElementById('volumeSlider');
     const volumeInput = document.getElementById('volumeInput');
+    const sheetTableBody = document.getElementById('sheetTableBody');
 
     volumeSlider.addEventListener('input', (e) => {
       volumeInput.value = e.target.value;
       calculate();
     });
 
-    // เมื่อกดจิ้มที่ช่องพิมพ์: ถ้าเป็นเลข 0 ให้ล้างออกทันที เพื่อให้พิมพ์ตัวเลขได้เลย
     volumeInput.addEventListener('focus', function() {
       if (this.value === '0') {
         this.value = '';
       }
     });
 
-    // เมื่อกดออกจากช่องพิมพ์: ถ้าไม่ได้พิมพ์อะไร ให้คืนค่าเป็น 0
     volumeInput.addEventListener('blur', function() {
       if (this.value === '' || isNaN(this.value)) {
         this.value = '0';
@@ -637,7 +451,7 @@
       const totalDemand = Math.max(0, parseInt(volumeInput.value) || 0);
 
       const btlPerLayer = spec.boxPerLayer * spec.btlPerBox; // 294 ขวด/ชั้น
-      const btlPerPal = btlPerLayer * spec.layerPerPal;      // 2,352 ขวด/พาเลท
+      const btlPerPal = spec.btlPerPal;                      // 2,352 ขวด/พาเลท
 
       const fullPallets = Math.floor(totalDemand / btlPerPal);
       const remAfterPallets = totalDemand % btlPerPal;
@@ -648,7 +462,7 @@
       const extraBoxes = Math.floor(remAfterLayers / spec.btlPerBox);
       const looseBottles = remAfterLayers % spec.btlPerBox;
 
-      // KPI Cards
+      // 1. KPI Cards
       document.getElementById('cardFullPallets').textContent = fullPallets.toLocaleString();
       document.getElementById('cardFullPalletsBtl').textContent = (fullPallets * btlPerPal).toLocaleString() + ' ขวด';
 
@@ -661,7 +475,7 @@
       document.getElementById('cardLooseBottles').textContent = looseBottles;
       document.getElementById('cardLooseBottlesBtl').textContent = looseBottles.toLocaleString() + ' ขวด';
 
-      // Visuals
+      // 2. Visuals
       document.getElementById('labelPalletStack').textContent = `1. พาเลทเต็ม (${fullPallets.toLocaleString()})`;
       document.getElementById('visPalletNum').textContent = fullPallets.toLocaleString();
 
@@ -674,7 +488,10 @@
       document.getElementById('labelLoose').textContent = `4. เศษขวด (${looseBottles})`;
       document.getElementById('visLooseNum').textContent = looseBottles;
 
-      // Table
+      // 3. Render 📝 ตารางเทียบสำหรับกรอก "ใบแสดงจำนวนการผลิต"
+      renderSheetTable(fullPallets, remAfterPallets, totalDemand);
+
+      // 4. Table
       document.getElementById('tblPalletUnits').textContent = `${fullPallets.toLocaleString()} พาเลท`;
       document.getElementById('tblPalletCap').textContent = `${btlPerPal.toLocaleString()} ขวด`;
       document.getElementById('tblPalletTotal').textContent = (fullPallets * btlPerPal).toLocaleString();
@@ -691,6 +508,47 @@
       document.getElementById('tblLooseTotal').textContent = looseBottles.toLocaleString();
 
       document.getElementById('tblGrandTotal').textContent = totalDemand.toLocaleString() + ' ขวด';
+    }
+
+    function renderSheetTable(fullPallets, remAfterPallets, totalDemand) {
+      if (totalDemand === 0) {
+        sheetTableBody.innerHTML = `<tr><td colspan="4" class="empty-msg">ยังไม่มียอดผลิตเป้าหมาย</td></tr>`;
+        return;
+      }
+
+      sheetTableBody.innerHTML = '';
+      let palletIndex = 1;
+
+      // พาเลทเต็ม (48 ลัง = 2,352 ขวด)
+      for (let i = 1; i <= fullPallets; i++) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${palletIndex}</strong></td>
+          <td>${spec.boxesPerPal}</td>
+          <td>${spec.btlPerPal.toLocaleString()}</td>
+          <td style="color: var(--text-muted);">-</td>
+        `;
+        sheetTableBody.appendChild(tr);
+        palletIndex++;
+      }
+
+      // พาเลทเศษ (ถ้ามียอดเศษเหลือ)
+      if (remAfterPallets > 0) {
+        const partialTotalBoxes = Math.floor(remAfterPallets / spec.btlPerBox);
+        const looseBottles = remAfterPallets % spec.btlPerBox;
+
+        const boxLabel = looseBottles > 0 ? `${partialTotalBoxes} / ${looseBottles}` : `${partialTotalBoxes}`;
+
+        const tr = document.createElement('tr');
+        tr.className = 'partial-row';
+        tr.innerHTML = `
+          <td><strong>${palletIndex}</strong></td>
+          <td style="color: #1d4ed8; font-weight: 800;">${boxLabel}</td>
+          <td style="color: #1d4ed8; font-weight: 800;">${remAfterPallets.toLocaleString()}</td>
+          <td style="color: #d97706; font-weight: 700;">พาเลทเศษ</td>
+        `;
+        sheetTableBody.appendChild(tr);
+      }
     }
 
     function renderLayerVisual(activeLayers, totalLayers) {
