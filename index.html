@@ -537,7 +537,9 @@
         const partialTotalBoxes = Math.floor(remAfterPallets / spec.btlPerBox);
         const looseBottles = remAfterPallets % spec.btlPerBox;
 
-        const boxLabel = looseBottles > 0 ? `${partialTotalBoxes} / ${looseBottles}` : `${partialTotalBoxes}`;
+        const boxLabel = looseBottles > 0 
+          ? `${partialTotalBoxes} ลัง (เศษ ${looseBottles} ขวด)` 
+          : `${partialTotalBoxes}`;
 
         const tr = document.createElement('tr');
         tr.className = 'partial-row';
